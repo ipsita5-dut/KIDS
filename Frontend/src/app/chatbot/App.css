@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh; /* Ensure the body takes the full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, white, powderblue);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh; /* Ensure the body takes the full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, white, powderblue);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+/* src/App.css */
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh; /* Ensure the body takes the full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('background1.jpeg') no-repeat center center fixed; /* Correct path */
+  background-size: cover; /* Cover the entire viewport */
+  position: relative; /* Position relative for overlay */
+  animation: fadeIn 2s ease-in; /* Fade-in effect */
+  z-index: 100;
+}
+
+/* Other styles remain unchanged */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start fully transparent */
+  }
+  to {
+    opacity: 1; /* End fully opaque */
+  }
+}
+
+.overlay {
+  position: fixed; /* Position overlay */
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(173, 216, 230, 0.5); /* Light blue tint with transparency */
+  z-index: 1; /* Ensure overlay is above the background */
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Ensure content is above the overlay */
+  position: relative; /* Position relative for stacking */
+}
+
+.chatbot-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 500px; /* Increased width */
+  max-width: 90%; /* Responsive max width */
+  margin: 20px auto; /* Center the container and add space from the top */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  opacity: 1.3; /* Lower opacity for the chatbot box */
+  position: relative; /* Ensure it stacks correctly */
+  z-index: 3; /* Ensure it is above the overlay */
+}
